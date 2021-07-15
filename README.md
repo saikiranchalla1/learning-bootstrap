@@ -122,4 +122,60 @@ How to shift all of the links to the left?
 Apply the following class to the `ul` tag
 - ml-auto
 
-When resizing the browser, the above navbar changes to a vertical stack. We can change this behavior to display a drop-down ins
+When resizing the browser, the above navbar changes to a vertical stack. We can change this behavior to display a drop-down instead.
+Steps:
+- Add the following button inside the `nav`.
+```html
+ <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+```
+
+- Enclose brand and `ul` in a div:
+```html
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <a class="navbar-brand" href="">BrandName</a>
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" href="">Contact</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="">Pricing</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="">Download</a>
+        </li>
+    </ul>
+</div>
+```
+
+# Bootstrap Grid Layout System
+Add the following code:
+```html
+<div class="row">
+    <div class="col" style="background-color:red; border: 1px solid;">
+        col
+    </div>
+</div>
+```
+This occupies 100% of the screen width. Adding more `div` tags takes up proportion of the screen.
+```html
+<div class="row">
+    <div class="col" style="background-color:red; border: 1px solid;">
+        col
+    </div>
+        <div class="col" style="background-color:red; border: 1px solid;">
+        col
+    </div>
+    <div class="col" style="background-color:red; border: 1px solid;">
+        col
+    </div>
+
+</div>
+```
+
+In Bootstrap we can specify the number of columns the `div` element should take using a number after the class `col` for example, `col-6` will take 6 columns.
+
+The total for a single-row is 12. That means `col-3` will only take up a quarter of the screen.
+
+
